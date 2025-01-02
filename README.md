@@ -1,0 +1,60 @@
+# seers frontframework for vanilla > example
+
+##master > example 브랜치 기준(예시 사이트)
+- assets
+    - css
+    - images
+- js(스크립트 파일)
+    - common(공통 디렉토리)
+        - constant.js(공통 전역변수 모음)
+        - loader.js(해당 url 파싱 후 필요한 controller, 또는 module 파일 로더 파일)
+    - controller(사용자 action처리와 api 호출까지 처리하는 파일 디렉토리)
+        - error.js(에러 처리 파일)
+        - info.js(기본 설명 파일)
+        - login.js(로그인 파일)
+        - logout.js(로그아웃 파일)
+    - custom(사이트별 필요한 파일 디렉토리)
+        - constant_.js(사이트별 공통 전역변수에서 변경이 예상되는 부분 처리와 추가적으로 생성되는 전역 변수 모음)
+        - fake_api_json_.js(api가 없을 시 json 생성하여, 미리 ui 작업할 수 있게 가상 응답 정의 파일)
+        - util_.js(사이트별 사용이 되는 함수 모음)
+    - model(api 결과를 가지고 데이터 파싱 및 바인딩 후 화면에 적용 처리하는 파일 디렉토리)
+        - login.js(로그인 파일)
+        - logout.js(로그아웃 파일)
+    - module(단위 기능 및 공통으로 사용되는 기능을 모듈화하여 처리하는 파일 디렉토리)
+        - alert
+        - layout
+            - template(디자인 파일 디렉토리)
+                - default(기본 테마, 테마 변경시 constant.js값을 변경 후 해당 테마로 디렉토리 만들고 파일을 복사하고, 내용 변경)
+                    - footer.js
+                    - header.js
+                    - layout.js
+                    - left_memu.js
+- constant.js(layout 모듈에서 사용하는 전역변수 모음 파일)
+- controller.js(layout 처리 파일)
+        - paging
+        - popup
+        - socket
+        - version
+        - windowWorker
+    - util(각종 기능별 처리하는 함수 디렉토리)
+        - bootstrap
+        - charjs
+        - d3
+        - datejs
+        - handlebars
+        - jquery
+        - slimscroll
+        - socketD3
+        - util.js
+    - index_init.js(초기 기본 설정 파일 로딩 후 기본 처리 및 컨트롤러 로딩)
+- template(디자인 파일)
+    - default
+        - content
+            - error.js
+            - info.js
+            - login.js
+- complete.html(사이트 설치시 보여지는 파일)
+- error.html(사이트 설치가 제대로 안됐을 경우 보여지는 파일)
+- index.html(기본 인덱스 파일)
+
+

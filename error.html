@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SEERSTECH FRAME WORK</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="seerstech" />
+    <meta name="author" content="seerstech" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="/assets/css/common/bootstrap/bootstrap-3.3.2.css" rel="stylesheet">
+</head>
+<body id="app">
+<div class="text-left" style="margin-left: 20px; display: none;" id="install" >
+    <h2>기본 파일 설치가 안됐습니다. <br />아래 내용에 따라 파일을 복사하여 새로고침 버튼을 클릭하세요.</h2>
+    <p>1. /js/custom/constant_.js > /js/custom/constant.js로 복사 후 파일안의 내용을 사이트에 맞게 변경하세요.</p>
+    <p>2. /js/custom/util_.js > /js/custom/util.js로 복사 후 파일안의 내용을 사이트에 맞게 변경하세요.</p>
+    <p><button onclick="location.href='/';">새로고침</button></p>
+</div>
+<div class="text-left" style="margin-left: 20px; display: none;" id="loading">
+    <h2>현재 아래 내용을 파일이 사이트에 생성되지 않았습니다.</h2>
+    <p>파일 주소 : <span id="src"></span></p>
+    <p><button onclick="location.href='/';">새로고침</button></p>
+</div>
+</body>
+<script>
+    const getUrlParam = function(){
+        let params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str,key,value) {
+            params[key] = decodeURIComponent(value);
+        });
+        return params;
+    }
+    let temp_params = getUrlParam();
+    if(temp_params.hasOwnProperty("type") === false) {
+        document.querySelector("#install").style.display = 'block';
+    }
+    else if(temp_params.hasOwnProperty("type") === true) {
+        if(temp_params.type === "loading") {
+            document.querySelector("#src").innerText = temp_params.src;
+            document.querySelector("#loading").style.display = 'block';
+        }
+        else if(temp_params.type === "can-not-use") {
+            document.querySelector("#controller").innerText = temp_params.controller;
+            document.querySelector("#can-not-use").style.display = 'block';
+        }
+    }
+</script>
+</html>
