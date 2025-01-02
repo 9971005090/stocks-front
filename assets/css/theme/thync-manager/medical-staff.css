@@ -1,0 +1,122 @@
+@charset "utf-8";
+.medical-staff.cm-table-wrap {
+    height: 533px;
+    overflow-y: scroll;
+}
+.cm-tbody.user-list{
+
+}
+.medical-staff .cm-table-cont .cm-td .cm-btn{
+    min-width: 40px;
+    font-size: 11px;
+    width: auto;
+    padding: 0px 4px;
+}
+
+/*
+*   모달 CSS
+*/
+.cm-small-modal{
+    width: 40vw;
+    height: 30vh;
+    position: absolute;
+    top: calc(100vh - 50vh - 15vh);
+    left: calc(100vw - 50vw - 20vw);
+    background: var(--white);
+    border: 1px solid #BBBBBB;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+/* modal middle */
+.cm-middle-modal{
+    width: 30vw;
+    height: 54vh;
+    position: absolute;
+    top: calc(100vh - 50vh - 27vh);
+    left: calc(100vw - 50vw - 15vw);
+    background: var(--white);
+    border: 1px solid #BBBBBB;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+/* modal small */
+.cm-large-modal{
+    width: 70vw;
+    height: 50vh;
+    position: absolute;
+    top: calc(100vh - 50vh - 25vh);
+    left: calc(100vw - 50vw - 35vw);
+    background: var(--white);
+    border: 1px solid #BBBBBB;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.cm-modal-header{
+    width: 100%;
+    height: 20%;
+    color: var(--select);
+    display: flex;
+    border-bottom: 1px solid #004488;
+}
+.cm-modal-contents{
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+.cm-modal-header-contents{
+    width: 100%;
+    display: inline-grid;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+
+/*
+*   모달 디자인 CSS 화면마다 변경
+*/
+
+.modal-title-h2{
+    height: 100%;
+    font-size: 20px;
+
+}
+.contents-info{
+    width: 100%;
+    height: 80%;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+.cm-modal-contents .contents-info .p{
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #000000;
+}
+.cm-modal-contents .contents-info .p .bold-text{
+    width: 100%;
+    height: 80%;
+    font-size: 35px;
+    letter-spacing: 0px;
+    color: #940045;
+}
+ .cm-modal-contents .contents-btn{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+.cm-modal-contents .contents-btn .comfirm-cancel-btn {
+    background: #940045;
+    color: #FFFFFF;
+}
+.cm-modal-contents .contents-btn .comfirm-ok-btn{
+    background: #007A94;
+    color: #FFFFFF;
+    width: 140px;
+}
+
+.medical-staff .option-list{
+    max-height: 400px;
+    overflow-y: auto;
+}

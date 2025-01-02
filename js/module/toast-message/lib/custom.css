@@ -1,0 +1,33 @@
+.jq-toast-wrap{
+    min-height: 48px;
+    border-radius: 24px;
+    max-width: 650px;
+}
+.jq-toast-single{
+    line-height: inherit;
+    border-radius: 24px;
+    margin-bottom: 0px;
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.jq-toast-single h2 {
+    font-size: 18px;
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 600;
+}
+.gradient-red{
+    background: linear-gradient(90deg, #DD1111 0%, #880000 100%);
+    padding: 24px;
+}
+.gradient-blue{
+    background: linear-gradient(90deg, #002244 0%, #0066BB 100%);
+    padding: 24px;
+}
+.gradient-gray{
+    background: #888888;
+    padding: 24px;
+}
