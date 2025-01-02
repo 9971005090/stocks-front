@@ -269,6 +269,7 @@ const promise = async () => {
     }
 
     return {
+        ignoreAuthAction: ignoreAuthAction,
         pre: pre,
         preAction: preAction,
         index: index,

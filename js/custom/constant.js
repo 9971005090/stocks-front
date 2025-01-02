@@ -145,7 +145,8 @@ GBL.API.SET_BASE_URL = function() {
     if((location.hostname.indexOf('localhost') !== -1 || location.hostname.indexOf("127.0.0.1") !== -1 || location.hostname.indexOf('staging-') !== -1 || location.hostname.indexOf('seersipm') !== -1 || location.hostname.indexOf('dev') !== -1) === false) {
         showSiteLoadingLog(` 운영 서버 `, `#1e4df8`, `#ffffff`);
         GBL.API.SERVICE_TYPE = `RELEASE`;
-        GBL.API.BASE_URL = "https://www.api.seersthync.com/mobiCAREConsole/API";   // release
+        // GBL.API.BASE_URL = "https://www.api.seersthync.com/mobiCAREConsole/API";   // release
+        GBL.API.BASE_URL = "https://stocks-owcr.onrender.com";   // release
         GBL.DEBUG.USE = false;
 
         // 추가 내용 정리
@@ -224,6 +225,6 @@ const setOnPremisesApiDomain = function() {
         GBL.API.BASE_URL = `http://192.168.0.1:8080/mobiCAREConsole/API`
     }
 }
-
+GBL.SESSION_FIRST_CHECK = true; // false : 인증, true : 비인증
 GBL.API.SET_BASE_URL();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
